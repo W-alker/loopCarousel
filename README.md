@@ -42,10 +42,10 @@ loopCarousel(el)
 ```js
 /**
  * @param {HTMLDivElement} el 必须,一个块DOM
- * @param {number} spaceBetween 如果通过margin或者其他方式设置了子元素之间的间隔,请传入这个间隔的px值,默认0
+ * @param {number} spaceBetween 如果通过margin设置了子元素之间的间隔,请传入这个间隔的px值,默认0
  * @param {number} duration 每次滚动展示完成的时间,默认8s
  * @param {boolean} useJs 是否使用JS动画,默认false
- * @param {string} timingFn 动画函数,同CSSs的'animation-timing-function',使用JS动画的情况下无效只允许默认值'linear'
+ * @param {string} timingFn 动画函数,同CSS的'animation-timing-function',使用JS动画的情况下只允许默认值'linear'
  * @returns {object} 
  */
 ```

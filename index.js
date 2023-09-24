@@ -1,4 +1,4 @@
-export class LoopCarousel {
+class LoopCarousel {
     constructor(el, spaceBetween = 0, duration = 8, useJs = false, timingFn = 'linear') {
         // 打标记
         el.dataset.loopCarousel = 'true'
@@ -72,10 +72,10 @@ export class LoopCarousel {
  * @param {number} spaceBetween 如果通过margin设置了子元素之间的间隔,请传入这个间隔的px值,默认0
  * @param {number} duration 每次滚动展示完成的时间,默认8s
  * @param {boolean} useJs 是否使用JS动画,默认false
- * @param {string} timingFn 动画函数,同CSS的'animation-timing-function',使用JS动画的情况下无效只允许默认值'linear'
+ * @param {string} timingFn 动画函数,同CSS的'animation-timing-function',使用JS动画的情况下只允许默认值'linear'
  * @returns {object} 
  */
-export function loopCarousel(el, spaceBetween = 0, duration = 8, useJs = false, timingFn = 'linear') {
+function loopCarousel(el, spaceBetween = 0, duration = 8, useJs = false, timingFn = 'linear') {
     if (el.dataset.loopCarousel) return
     const obj = new LoopCarousel(el, spaceBetween, duration, useJs, timingFn)
     obj.appendNode()
@@ -83,3 +83,6 @@ export function loopCarousel(el, spaceBetween = 0, duration = 8, useJs = false, 
     obj.runAnimation()
     return obj
 }
+
+export { LoopCarousel, loopCarousel }
+export default loopCarousel
