@@ -28,10 +28,10 @@ import loopCarousel from 'loop-carousel/dist'
     </div>
 </div>
 ```
-因为只需要简单的设置两个属性，所以就不额外写CSS文件了，展示列表的子项可以自行通过margin等方式设置间隔.    
+因为只需要简单的设置两个属性，所以就不额外写CSS文件了，展示列表的子项可以自行通过margin等方式设置间隔。    
 
 
-最基础的只需要这样使用,就可以看到动画了:    
+最基础的只需要这样使用，就可以看到动画了:    
 ```js
 const el = document.querySelector('.loop-carousel-list')
 loopCarousel(el)
