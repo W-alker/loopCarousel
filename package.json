@@ -1,6 +1,6 @@
 {
   "name": "loop-carousel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "无限循环滚动，展示列表",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,5 @@
     "javascript",
     "展示列表",
     "无限循环"
-  ],
-  "dependencies": {
-    "loop-carousel": "^1.0.0"
-  }
+  ]
 }
