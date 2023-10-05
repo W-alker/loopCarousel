@@ -20,7 +20,7 @@ import loopCarousel from 'loop-carousel/dist'
 ```
 
 ## use
-首先我们需要一个容器并设置了`overflow:hidden`，然后这个展示列表作为唯一子元素在其中，同时这个展示列表最好是个弹性盒，例如: 
+首先我们需要一个容器并设置了`overflow:hidden`，然后这个展示列表作为唯一子元素在其中，这个展示列表的总宽度至少应该撑满整个屏幕宽，例如: 
 ```html
 <div class="loop-carousel-wrapper" style="overflow:hidden;">
     <div class="loop-carousel-list" style="display:flex;">
@@ -54,6 +54,6 @@ loopCarousel(el)
 ```js
 const el = document.querySelector('.loop-carousel-list')
 const obj = loopCarousel(el)
-obj.stopAnimation() // 停止动画,使用JS动画会停在当前位置,而CSS动画则会重置到起始位置
-obj.runAnimation() // 继续执行动画
+obj.stopAnimation() // 停止动画
+obj.runAnimation() // 执行动画
 ```

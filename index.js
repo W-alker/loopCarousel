@@ -44,6 +44,9 @@ class LoopCarousel {
         const style = document.querySelector('style')[0] || document.createElement('style');
         style.innerHTML += frames;
         document.querySelector('style')[0] ? null : document.querySelector('head').appendChild(style);
+
+        let aniStr = `loopCarousel_x_${this.scrollWidth} ${this.duration}s infinite ${this.timingFn}`
+        this.el.style.animation = aniStr
     }
 
     createAnimation() {
@@ -55,14 +58,12 @@ class LoopCarousel {
             this.jsAniIsStop = false
             return this.jsAni()
         }
-
-        let aniStr = `loopCarousel_x_${this.scrollWidth} ${this.duration}s infinite ${this.timingFn}`
-        this.el.style.animation = aniStr
+        else { this.el.style.animationPlayState = 'running' }
     }
 
     stopAnimation() {
         if (this.useJs) this.jsAniIsStop = true
-        else this.el.style.animation = ''
+        else this.el.style.animationPlayState = 'paused'
     }
 }
 
@@ -85,4 +86,5 @@ function loopCarousel(el, spaceBetween = 0, duration = 8, useJs = false, timingF
 }
 
 export { LoopCarousel, loopCarousel }
+
 export default loopCarousel
